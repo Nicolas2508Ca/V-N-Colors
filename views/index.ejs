@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/public/reset.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/public/style.css">
+    <title>V&N Colors</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <div id="refresh" class="logo_destaque">
+            <img src="../img/logo.png" alt="logo" />
+            <p class="logo-azul">V&N Colors</p>
+          </div>
+          <input type="text" placeholder="Qué deseas buscar?"/>
+        </div>
+
+        <div class="list">
+          <ul class="list_menu">
+            <li class="list_menu_item"><a href="../views/index.ejs" class="list_menu_itemlink">Inicio</a></li>
+            <li class="list_menu_item"><a href="../views/login.ejs" class="list_menu_itemlink">Login</a></li>
+            <li class="list_menu_item"><a href="../views/productos.ejs" class="list_menu_itemlink">Productos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <div class="banner_slider">
+        <img src="../img/WhatsApp Image 2023-10-19 at 6.29.07 PM (1).jpeg" alt="Imagen 1">
+        <img src="../img/WhatsApp Image 2023-10-19 at 6.29.07 PM (2).jpeg" alt="Imagen 2">
+        <img src="../img/WhatsApp Image 2023-10-19 at 6.29.07 PM.jpeg" alt="Imagen 3">
+      </div>
+    </section>
+
+    <section class="marcas">
+      <div class="marcas_titulo">
+        <h1>Marcas</h1>
+      </div>
+      <div class="marcas_imagenes">
+        <img class="marcas_imagenes_list" src="../img/marca1.jpg" alt="marca 1">
+        <img class="marcas_imagenes_list" src="../img/marca2.jpg" alt="marca 2">
+        <img class="marcas_imagenes_list" src="../img/marca3.jpg" alt="marca 3">
+        <img class="marcas_imagenes_list" src="../img/marca4.jpg" alt="marca 4">
+      </div>
+      <div class="marcas_mas">
+          <button class="marcas_boton">Ver productos referenciados</button>
+      </div>
+    </section>
+
+    <section class="contacto">
+
+      <div class="contacto_imagen ">
+        <img src="../img/logo.png" alt="logo" />
+        <p>V&N Colors</p>
+      </div>
+
+      <div class="contacto_links">
+        <a href="">Quienes somos</a>
+        <a href="">Política de Privacidad</a>
+        <a href="">Programa de fidelidad</a>
+        <a href="">Nuestras Tiendas</a>
+      </div>
+
+      <div class="form">
+        <p>Habla con nosotros</p>
+          <input
+            type="text"
+            name="Nombre"
+            id="Nombre"
+            class="input-nombre"
+            placeholder="Nombre"
+          />
+        <textarea
+          name="mensaje"
+          id="msg"
+          placeholder="Escribe tu Mensaje"
+        ></textarea>
+        <button>Enviar Mensaje</button>
+      </div>
+
+    </section>
+  </body>
+</html>
+
+<script>
+  let refresh = document.getElementById('refresh');
+  refresh.addEventListener('click', _ => 
+  {
+      location.reload();
+  })
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    var currentIndex = 0;
+    var images = $(".banner_slider img");
+    var interval = 5000; // Cambia cada 5 segundos (5000ms)
+
+    function showImage(index) {
+      images.hide();
+      images.eq(index).show();
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    // Iniciar carrusel
+    showImage(currentIndex);
+    setInterval(nextImage, interval);
+  });
+</script>

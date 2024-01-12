@@ -1,0 +1,329 @@
+/*Header*/
+header 
+{
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: linear-gradient(-45deg, rgb(230, 126, 225), rgb(207, 69, 200));
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite;
+  position: sticky;
+  top: 0;
+}
+
+@-webkit-keyframes gradient 
+{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient 
+{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+nav
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.logo
+{
+  display: flex;
+  width: 60%;
+  align-items: center;
+  
+}
+
+.logo_destaque :hover
+{
+  cursor: pointer;
+}
+
+.logo input
+{
+  width: 90%;
+  margin-right: 10%;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(242, 207, 242);
+  padding-left: 3%;
+  background-image: url("../img/lupa.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 90%;
+}
+
+.logo input
+{
+  outline: none;
+}
+
+.logo_destaque
+{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(242, 207, 242);
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 3%;
+  margin-right: 10%;
+  padding-right: 3%;
+  border: 3px solid black;
+}
+
+.logo_destaque p
+{
+  font-size: 180%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.logo img
+{
+  width: 20%;
+  margin-right: 2%;
+}
+
+.list
+{
+  width: 35%;
+}
+.list_menu
+{
+  display: flex;
+  margin-left: 15%;
+}
+
+.list_menu_item
+{
+  color: black;
+  margin-right: 6%;
+  font-size: 110%;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.list_menu_item a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+.list_menu_item :hover
+{
+  cursor: pointer;
+}
+
+/*Banner*/
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner_slider {
+  width: 100%; 
+  height: 10%;
+  display: flex; 
+  transition: transform 1s ease-in-out; 
+}
+
+.banner_slider img {
+  width: 100%;
+  height: 487px;
+}
+
+.banner_info {
+  padding-top: 8%;
+  text-align: center;
+}
+
+.banner_info h1 {
+  font-size: 200%;
+  margin-bottom: 6%;
+}
+
+.banner_info h4 {
+  font-size: 200%;
+  margin-bottom: 15%;
+}
+
+.banner_boton {
+  width: 100%;
+  margin-bottom: 5px;
+  border: none;
+  color: black;
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(230, 126, 225);
+  margin-bottom: 8%;
+}
+
+/*Marcas*/
+.marcas
+{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marcas_titulo
+{
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 4%;
+  text-align: center;
+  font-size: 200%;
+}
+
+.marcas_imagenes
+{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+
+.marcas_imagenes_list
+{
+  width: 15%;
+}
+
+.marcas_boton
+{
+  width: 100%;
+  margin-bottom: 5px;
+  border: none; 
+  color: black; 
+  padding: 14px 210px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  background-color: rgb(230, 126, 225);
+  margin-top: 7%;
+  margin-bottom: 5%;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 40px;
+}
+
+/*Contacto*/
+.contacto
+{
+  background-color: rgb(250, 191, 235);
+  display: flex;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  align-items: center;
+}
+
+.contacto_imagen
+{
+  display: flex;
+  width: 20%;
+  height: 90%;
+  margin: 20px 20px 20px 20px;
+  align-items: center;
+}
+
+.contacto_imagen img
+{
+  width: 40%;
+  height: 10%;
+  margin-right: 5%;
+}
+
+.contacto_links{
+  display: flex;
+  flex-direction: column;
+  line-height: 300%;
+  width: 25%;
+  margin-right: 3%;
+}
+
+.contacto_links a {
+  color: rgb(191, 5, 182);
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 120%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.form 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 45%;
+}
+
+.form p 
+{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-size: 150%;
+  text-align: left;
+}
+
+.form input 
+{
+  width: 90%;
+  position: relative;
+  height: 56px;
+  border: transparent;
+  margin-bottom: 20px;
+  box-sizing: content-box;
+  padding: 0.5% 2.7%;
+  margin-top: 4%;
+}
+
+input, textarea {
+  outline-color: rgb(141,84,156);
+}
+.form textarea 
+{
+  width: 92%;
+  height: 70px;
+  font-family: "Relaway", sans-serif;
+  border: transparent;
+  margin-bottom: 20px;
+  padding-left: 3%;
+  padding-top: 2%;
+}
+
+.form button 
+{
+  background-color: rgb(230, 126, 225);
+  border: none;
+  height: 50px;
+  width: 60%;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 40px;
+}
+

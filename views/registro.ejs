@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/public/reset.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/public/style.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/public/registro.css">
+    <title>V&N Colors</title>
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+        <div class="logo">
+          <div id="refresh" class="logo_destaque">
+            <img src="../img/logo.png" alt="logo" />
+            <p class="logo-azul">V&N Colors</p>
+          </div>
+          <input type="text" placeholder="Qué deseas buscar?"/>
+        </div>
+
+        <div class="list">
+          <ul class="list_menu">
+            <li class="list_menu_item"><a href="../views/index.ejs" class="list_menu_itemlink">Inicio</a></li>
+            <li class="list_menu_item"><a href="../views/login.ejs" class="list_menu_itemlink">Login</a></li>
+            <li class="list_menu_item"><a class="list_menu_itemlink">Productos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="login">
+        <div class="login_title">Registrate</div>
+        <form action="/validar" class="form-cadastro" data-form method="post">
+          <input
+            class="login_input__nombre"
+            type="text"
+            name="nom"
+            id="nom"
+            placeholder="Nombres y Apellidos"
+            required
+          />
+          <input
+            class="login_input__cedula"
+            type="number"
+            name="ced"
+            id="ced"
+            placeholder="Cedula"
+            required
+          />
+          <input
+            class="login_input__email"
+            type="email"
+            name="correo"
+            id="correo"
+            placeholder="Email"
+            required
+            data-email
+          />
+          <input
+            class="login_input__telefono"
+            type="number"
+            name="tel"
+            id="tel"
+            placeholder="Phone"
+            required
+          />
+          <input
+            class="login_input__contraseña"
+            type="password"
+            name="pass"
+            id="pass"
+            placeholder="Contraseña"
+            required
+            data-password
+          />
+          <button type="submit" value="Registrar" class="login_btn">Completar registro</button>
+        </form>
+    </section>
+
+    <section class="contacto">
+
+      <div class="contacto_imagen ">
+        <img src="../img/logo.png" alt="logo" />
+        <p>V&N Colors</p>
+      </div>
+  
+      <div class="contacto_links">
+        <a href="">Quienes somos</a>
+        <a href="">Política de Privacidad</a>
+        <a href="">Programa de fidelidad</a>
+        <a href="">Nuestras Tiendas</a>
+      </div>
+  
+      <div class="form">
+        <p>Habla con nosotros</p>
+        <input
+          type="text"
+          name="Nombre"
+          id="Nombre"
+          class="input-nombre"
+          placeholder="Nombre"
+        />
+        <textarea
+          name="mensaje"
+          id="msg"
+          placeholder="Escribe tu Mensaje"
+        ></textarea>
+        <button>Enviar Mensaje</button>
+      </div>
+    </section>
+
+    </body>
+  </html>
